@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { NexusIcon } from './icons/NexusIcon';
 
@@ -28,7 +27,7 @@ const NexusDisplay: React.FC<NexusDisplayProps> = ({ narrative, isLoading }) => 
         <div>
           <h2 className="text-2xl font-semibold text-purple-400">Module 2: The Nexus</h2>
           <p className="text-slate-400">
-            {isLoading ? 'Synthesizing narrative from disparate signals...' : 'Contextual narrative established.'}
+            {isLoading ? 'Synthesizing narrative from disparate signals...' : 'Contextual narrative established. Nexus has woven seemingly unrelated events into a single, causal story, explaining underlying market dynamics and highlighting potential future scenarios.'}
           </p>
         </div>
       </div>

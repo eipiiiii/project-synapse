@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { SentinelIcon } from './icons/SentinelIcon';
 
@@ -23,7 +22,7 @@ const SentinelPanel: React.FC<SentinelPanelProps> = ({ onAnalyze, isLoading }) =
         <SentinelIcon className="w-8 h-8 text-green-400" />
         <div>
           <h2 className="text-2xl font-semibold text-green-400">Module 1: The Sentinels</h2>
-          <p className="text-slate-400">Deploying perception grid. Define the analysis target.</p>
+          <p className="text-slate-400">Deploying ultra-wide real-time perception grid. Actively collecting signals from across the internet to detect market micro-tremors.</p>
         </div>
       </div>
       <form onSubmit={handleSubmit} className="mt-4 flex flex-col sm:flex-row gap-3">

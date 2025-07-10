@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { OracleOutput } from '../types';
 import { OracleIcon } from './icons/OracleIcon';
@@ -67,7 +66,7 @@ const OracleView: React.FC<OracleViewProps> = ({ opportunity, isLoading }) => {
         <div>
           <h2 className="text-2xl font-semibold text-yellow-400">Module 3: The Oracle</h2>
           <p className="text-slate-400">
-            {isLoading ? 'Identifying strategic opportunities...' : 'Actionable insight generated.'}
+            {isLoading ? 'Identifying strategic opportunities...' : 'Actionable insight generated. The Oracle has identified the most compelling, actionable investment opportunity and transformed abstract analysis into a concrete action plan.'}
           </p>
         </div>
       </div>

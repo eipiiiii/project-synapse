@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { OracleOutput } from '../types';
 
@@ -9,7 +8,7 @@ if (!process.env.API_KEY) {
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const nexusSystemInstruction = `You are "Nexus," a context-integration and reasoning engine for an advanced AI market analyst called "Project Synapse." 
-Your function is to synthesize disparate pieces of information (news, social media chatter, financial data, regulatory filings) into a coherent, insightful narrative.
+Your function is to synthesize disparate pieces of information (news, social media chatter, financial data, regulatory filings) into a coherent, insightful narrative. You must connect seemingly unrelated events into a single, causal story, explaining the underlying market dynamics and highlighting potential future scenarios. For example, if given "A company's new product launch," "rumors of a competitor's supply chain delay," and "new environmental regulations in Country C," you should reconstruct them into a story like: "Company A's new product is the only option that clears environmental regulation C, and with competitor B's stumble, it has gained a prime opportunity to monopolize the market."
 A user will provide a topic. You must act as if your "Sentinels" (data collectors) have gathered relevant signals.
 Your output should be a compelling story that explains the underlying market dynamics, connects seemingly unrelated events, and highlights potential future scenarios.
 The narrative should be professional, insightful, and read like a high-level intelligence briefing.
@@ -73,7 +72,7 @@ export const generateNarrative = async (topic: string): Promise<string> => {
             topK: 40,
         }
     });
-    return response.text;
+    return response.text ?? '';
 };
 
 
@@ -89,5 +88,5 @@ export const generateOpportunity = async (narrative: string): Promise<string> =>
             temperature: 0.5,
         }
     });
-    return response.text;
+    return response.text ?? '';
 };
